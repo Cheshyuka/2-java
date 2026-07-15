@@ -11,11 +11,11 @@ import java.util.List;
 public class PostService {
 
     private List<Post> posts = new ArrayList<>();
-
+    private long nextId = 0;
     {
-        posts.add(new Post("Первый пост в блоге!", new Date()));
-        posts.add(new Post("Второй пост. Уже интереснее.", new Date()));
-        posts.add(new Post("Третий пост. Лайкните, если понравилось!", new Date()));
+        posts.add(new Post(nextId++,"Первый пост в блоге!", new Date()));
+        posts.add(new Post(nextId++,"Второй пост. Уже интереснее.", new Date()));
+        posts.add(new Post(nextId++,"Третий пост. Лайкните, если понравилось!", new Date()));
     }
 
     public List<Post> listAllPosts() {
@@ -23,6 +23,6 @@ public class PostService {
     }
 
     public void create(String text) {
-        posts.add(new Post(text, new Date()));
+        posts.add(new Post(nextId++, text, new Date()));
     }
 }
