@@ -12,11 +12,7 @@ public class PostService {
 
     private List<Post> posts = new ArrayList<>();
     private long nextId = 0;
-    {
-        posts.add(new Post(nextId++,"Первый пост в блоге!", new Date()));
-        posts.add(new Post(nextId++,"Второй пост. Уже интереснее.", new Date()));
-        posts.add(new Post(nextId++,"Третий пост. Лайкните, если понравилось!", new Date()));
-    }
+
 
     public List<Post> listAllPosts() {
         return posts;
