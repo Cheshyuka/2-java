@@ -17,6 +17,9 @@ public class Post {
     private Integer likes;
     private Date creationDate;
 
+    protected Post() {
+    }
+
     public Post(Long id, String text, Date creationDate){
         this.id = id;
         this.text = text;
